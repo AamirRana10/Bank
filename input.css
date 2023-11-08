@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+@layer components {
+    .meunu-hlink{
+        @apply
+        hover:text-color-secondary dark:hover:text-[#1d5d98] transition ease-in duration-300 hover:underline
+    }
+    #mobile-hlink{
+        @apply
+        dark:text-black
+        hover:text-color-secondary
+        ease-in duration-200
+    }
+    .toggle-menu-btn{
+        @apply
+        dark:bg-[#1d5d98] dark:text-white
+        bg-color-secondary
+        py-3 px-9 font-bold
+        rounded-md capitalize
+        hover:opacity-80 ease-in duration-200
+    }
+    .button {
+        @apply
+        dark:bg-[#1D5D9B] dark:text-white
+        bg-color-secondary
+         py-3 px-9 font-bold
+         rounded-md capitalize
+         hover:opacity-80 ease-in duration-200
+    }
+    .title{
+        @apply
+        text-3xl font-bold 
+        leading-snug 
+        mb-4 md:text-4xl 
+    }
+    .Cards-Main{
+        @apply
+        items-center grid px-8
+        md:grid-cols-2 md:gap-y-6
+        lg:grid-cols-3
+    }
+    .card-data{
+        @apply
+        cursor-pointer
+        text-center 
+        px-5 py-20 mb-10 mx-auto
+        border-2 border-color-gray rounded-2xl
+        md:w-[80%]
+        hover:bg-color-primary-dark ease-in duration-200
+        dark:hover:dark:bg-[#CEE6F3]
+    }
+    .Cards-Main-two{
+        @apply
+        items-center grid px-8
+        md:grid-cols-3
+        lg:grid-cols-3
+    }
+    .card-data-two{
+        @apply
+        cursor-pointer
+        text-center 
+        px-5 mb-10 mx-auto
+    }
+    .golder-hover-icon{
+        @apply
+        hover:bg-color-secondary ease-in duration-200
+        dark:bg-[#CEE6F3]
+        dark:hover:bg-[#1d5d98]
+        dark:hover:text-white
+    }
+
+    /* Testimonials Section Styling*/
+
+    .user-pic{
+        transition: all 0.2s ease;;
+    }
+    .active-pic{
+        @apply
+        border-2 border-solid border-color-secondary
+        dark:border-[#1D5D9B]
+    }
+    .user-text {
+        @apply
+        hidden
+    }
+    .active-text {
+        display: block;
+        animation: moveup 1s linear forwards;
+    }
+    @keyframes moveup {
+        0% {
+            margin-top: 40px;
+            opacity: 0;
+        }
+        50% {
+            margin-top: 20px;
+            opacity: 0.1;
+        }
+        100% {
+            margin-top: 0px;
+            opacity: 1;
+        }
+    }
+    .toggleSpan{
+        @apply
+        absolute top-0 left-0 right-0 bottom-0 bg-color-primary-light dark:bg-[#1D5D9B] border border-solid
+        border-color-gray rounded-full duration-300 before:content-[''] before:absolute before:w-6
+        before:h-6 before:bottom-1 before:left-1 before:rounded-full before:bg-color-white  before:duration-300
+        peer-checked:before:translate-x-12 peer-checked:bg-color-secondary dark:peer-checked:bg-[#1D5D9B]
+    }
+    .card{
+        perspective: 1000px;
+    }
+    .front,
+    .back {
+        backface-visibility: hidden;
+        transition: all 0.4s ease;
+    }
+    .front{
+        overflow:hidden;
+    }
+    .cardBtn{
+        @apply
+        dark:bg-[#1D5D9B]
+        bg-color-primary-dark 
+        rounded-md 
+        px-10 py-3 w-full font-bold
+        hover:bg-color-secondary ease-in duration-200
+    }
+    .contact-input{
+        @apply
+        py-2 px-3 md:py-3 rounded-md
+    }
+    .footer-paragraph{
+        @apply
+        dark:hover:text-[#1d5d98]
+        cursor-pointer underline hover:text-color-secondary hover:no-underline transition ease-in duration-200
+    }
+}
